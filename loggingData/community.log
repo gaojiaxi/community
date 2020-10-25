@@ -1,0 +1,11 @@
+2020-10-25 14:39:46.597  INFO 14952 --- [main] com.nowcoder.community.LoggerTests       : Starting LoggerTests on Jiaxi with PID 14952 (started by gaoji_000 in F:\project\community)
+2020-10-25 14:39:46.599 DEBUG 14952 --- [main] com.nowcoder.community.LoggerTests       : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-25 14:39:46.599  INFO 14952 --- [main] com.nowcoder.community.LoggerTests       : No active profile set, falling back to default profiles: default
+2020-10-25 14:39:48.617  INFO 14952 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-25 14:39:48.747  INFO 14952 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-25 14:39:49.083  INFO 14952 --- [main] com.nowcoder.community.LoggerTests       : Started LoggerTests in 2.985 seconds (JVM running for 4.068)
+2020-10-25 14:39:49.468 DEBUG 14952 --- [main] com.nowcoder.community.LoggerTests       : debug log
+2020-10-25 14:39:49.469  INFO 14952 --- [main] com.nowcoder.community.LoggerTests       : info log
+2020-10-25 14:39:49.469  WARN 14952 --- [main] com.nowcoder.community.LoggerTests       : warn log
+2020-10-25 14:39:49.469 ERROR 14952 --- [main] com.nowcoder.community.LoggerTests       : error log
+2020-10-25 14:39:49.483  INFO 14952 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

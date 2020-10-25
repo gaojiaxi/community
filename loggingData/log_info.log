@@ -1,0 +1,7 @@
+2020-10-25 14:52:55,673 INFO [main] c.n.c.LoggerTests [StartupInfoLogger.java:55] Starting LoggerTests on Jiaxi with PID 7596 (started by gaoji_000 in F:\project\community)
+2020-10-25 14:52:55,675 INFO [main] c.n.c.LoggerTests [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-10-25 14:52:57,730 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-25 14:52:57,833 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2020-10-25 14:52:58,147 INFO [main] c.n.c.LoggerTests [StartupInfoLogger.java:61] Started LoggerTests in 3.066 seconds (JVM running for 4.062)
+2020-10-25 14:52:58,493 INFO [main] c.n.c.LoggerTests [LoggerTests.java:24] info log
+2020-10-25 14:52:58,504 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
