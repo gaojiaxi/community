@@ -32,9 +32,10 @@ public class MapperTests {
         user = userMapper.selectByName("liubei");
         System.out.println(user);
 
-        user = userMapper.selectByEmail("nowcoder101@sina.com");
+        user = userMapper.selectByEmail("test@qq.com");
         System.out.println(user);
     }
+
     @Test
     public void testInsertUser(){
         User user = new User();
