@@ -1,6 +1,1 @@
-2020-10-25 14:52:58,493 WARN [main] c.n.c.LoggerTests [LoggerTests.java:25] warn log
-2020-10-25 15:52:01,539 WARN [main] o.s.w.c.s.GenericWebApplicationContext [AbstractApplicationContext.java:559] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailClient': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.mail.username' in value "${spring.mail.username}"
-2020-10-25 19:47:14,599 WARN [HikariPool-1 housekeeper] c.z.h.p.HikariPool [HikariPool.java:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m30s857ms970µs400ns).
-2020-10-25 19:50:16,049 WARN [HikariPool-1 housekeeper] c.z.h.p.HikariPool [HikariPool.java:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m37s766ms138µs600ns).
-2020-10-25 19:51:36,761 WARN [HikariPool-1 housekeeper] c.z.h.p.HikariPool [HikariPool.java:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m20s713ms250µs100ns).
-2020-10-25 19:53:42,925 WARN [HikariPool-1 housekeeper] c.z.h.p.HikariPool [HikariPool.java:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s724ms129µs400ns).
+2020-10-29 21:16:20,909 WARN [http-nio-8080-exec-4] o.a.c.u.SessionIdGeneratorBase [DirectJDKLog.java:173] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [110] milliseconds.
