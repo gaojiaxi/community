@@ -63,7 +63,7 @@ public class UserController {
         String suffix = fileName.substring(fileName.lastIndexOf("."));
         if(StringUtils.isBlank(suffix)){
             model.addAttribute("error","文件格式不正确！");
-            return "/site/settings";
+            return "/site/setting";
         }
 
         // 生成随机文件名
@@ -106,6 +106,6 @@ public class UserController {
             logger.error("读取头像失败： " + e.getMessage());
         }
     }
-
+    
 
 }
