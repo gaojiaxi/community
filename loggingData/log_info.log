@@ -82,3 +82,56 @@
 2020-12-17 11:02:36,595 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 6 ms
 2020-12-17 11:02:36,627 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
 2020-12-17 11:02:36,759 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2020-12-17 11:07:51,353 INFO [restartedMain] c.n.c.CommunityApplication [StartupInfoLogger.java:55] Starting CommunityApplication on Jiaxi with PID 3932 (F:\project\community\target\classes started by gaoji_000 in F:\project\community)
+2020-12-17 11:07:51,356 INFO [restartedMain] c.n.c.CommunityApplication [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-12-17 11:07:51,393 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-17 11:07:51,393 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-17 11:07:52,472 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2020-12-17 11:07:52,479 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2020-12-17 11:07:52,479 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2020-12-17 11:07:52,479 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-12-17 11:07:52,564 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2020-12-17 11:07:52,565 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:285] Root WebApplicationContext: initialization completed in 1172 ms
+2020-12-17 11:07:52,979 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-17 11:07:53,031 INFO [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2020-12-17 11:07:53,164 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2020-12-17 11:07:53,177 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2020-12-17 11:07:53,194 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
+2020-12-17 11:07:53,203 INFO [restartedMain] c.n.c.CommunityApplication [StartupInfoLogger.java:61] Started CommunityApplication in 2.188 seconds (JVM running for 2.778)
+2020-12-17 11:08:02,486 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-17 11:08:02,486 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2020-12-17 11:08:02,490 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 4 ms
+2020-12-17 11:08:02,515 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2020-12-17 11:08:02,640 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2020-12-17 17:32:37,022 INFO [main] c.n.c.MapperTests [StartupInfoLogger.java:55] Starting MapperTests on Jiaxi with PID 5160 (started by gaoji_000 in F:\project\community)
+2020-12-17 17:32:37,054 INFO [main] c.n.c.MapperTests [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-12-17 17:32:40,619 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-17 17:32:40,894 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2020-12-17 17:32:41,225 INFO [main] c.n.c.MapperTests [StartupInfoLogger.java:61] Started MapperTests in 5.223 seconds (JVM running for 7.628)
+2020-12-17 17:32:41,636 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-17 17:35:47,177 INFO [main] c.n.c.MapperTests [StartupInfoLogger.java:55] Starting MapperTests on Jiaxi with PID 18584 (started by gaoji_000 in F:\project\community)
+2020-12-17 17:35:47,180 INFO [main] c.n.c.MapperTests [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-12-17 17:35:49,434 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-17 17:35:49,634 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2020-12-17 17:35:49,935 INFO [main] c.n.c.MapperTests [StartupInfoLogger.java:61] Started MapperTests in 3.194 seconds (JVM running for 4.104)
+2020-12-17 17:35:50,157 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-17 17:36:30,640 INFO [main] c.n.c.MapperTests [StartupInfoLogger.java:55] Starting MapperTests on Jiaxi with PID 5476 (started by gaoji_000 in F:\project\community)
+2020-12-17 17:36:30,643 INFO [main] c.n.c.MapperTests [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-12-17 17:36:32,889 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-17 17:36:33,090 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2020-12-17 17:36:33,378 INFO [main] c.n.c.MapperTests [StartupInfoLogger.java:61] Started MapperTests in 3.223 seconds (JVM running for 4.185)
+2020-12-17 17:36:33,620 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2020-12-17 17:36:34,138 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2020-12-17 17:36:34,301 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-17 17:36:34,302 INFO [SpringContextShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2020-12-17 17:36:34,337 INFO [SpringContextShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2020-12-17 17:39:46,043 INFO [main] c.n.c.MapperTests [StartupInfoLogger.java:55] Starting MapperTests on Jiaxi with PID 15672 (started by gaoji_000 in F:\project\community)
+2020-12-17 17:39:46,046 INFO [main] c.n.c.MapperTests [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-12-17 17:39:48,226 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-17 17:39:48,423 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2020-12-17 17:39:48,727 INFO [main] c.n.c.MapperTests [StartupInfoLogger.java:61] Started MapperTests in 3.123 seconds (JVM running for 4.002)
+2020-12-17 17:39:48,946 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2020-12-17 17:39:49,216 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2020-12-17 17:39:49,421 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-17 17:39:49,423 INFO [SpringContextShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2020-12-17 17:39:49,432 INFO [SpringContextShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
