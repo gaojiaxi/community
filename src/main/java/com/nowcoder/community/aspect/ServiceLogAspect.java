@@ -35,6 +35,6 @@ public class ServiceLogAspect {
         String target = joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName();
 
         logger.info(String.format("用户[%s],在[%s],访问了[%s]", ip, now, target));
-        
+
     }
 }

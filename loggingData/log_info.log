@@ -130,3 +130,75 @@
 2020-12-22 12:36:58,214 INFO [http-nio-8080-exec-5] c.n.c.a.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2020-12-22 12:36:58],访问了[com.nowcoder.community.service.UserService.findUserById]
 2020-12-22 12:36:58,222 INFO [http-nio-8080-exec-5] c.n.c.a.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2020-12-22 12:36:58],访问了[com.nowcoder.community.service.UserService.findLoginTicket]
 2020-12-22 12:36:58,225 INFO [http-nio-8080-exec-5] c.n.c.a.ServiceLogAspect [ServiceLogAspect.java:37] 用户[127.0.0.1],在[2020-12-22 12:36:58],访问了[com.nowcoder.community.service.UserService.findUserById]
+2020-12-22 14:14:50,458 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests on Jiaxi with PID 19304 (started by gaoji_000 in F:\project\community)
+2020-12-22 14:14:50,460 INFO [main] c.n.c.RedisTests [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-12-22 14:14:51,432 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-22 14:14:51,436 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-22 14:14:51,468 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-12-22 14:14:54,099 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-22 14:14:54,237 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2020-12-22 14:14:54,754 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 4.967 seconds (JVM running for 6.148)
+2020-12-22 14:14:55,793 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-22 14:18:09,334 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests on Jiaxi with PID 18868 (started by gaoji_000 in F:\project\community)
+2020-12-22 14:18:09,336 INFO [main] c.n.c.RedisTests [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-12-22 14:18:10,270 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-22 14:18:10,275 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-22 14:18:10,312 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2020-12-22 14:18:12,769 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-22 14:18:12,891 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2020-12-22 14:18:13,374 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 4.52 seconds (JVM running for 5.44)
+2020-12-22 14:18:14,072 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-22 14:21:23,687 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests on Jiaxi with PID 2176 (started by gaoji_000 in F:\project\community)
+2020-12-22 14:21:23,690 INFO [main] c.n.c.RedisTests [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-12-22 14:21:24,486 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-22 14:21:24,491 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-22 14:21:24,531 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2020-12-22 14:21:27,450 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-22 14:21:27,616 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2020-12-22 14:21:28,217 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 4.965 seconds (JVM running for 7.44)
+2020-12-22 14:21:29,078 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-22 14:23:29,533 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests on Jiaxi with PID 9232 (started by gaoji_000 in F:\project\community)
+2020-12-22 14:23:29,537 INFO [main] c.n.c.RedisTests [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-12-22 14:23:30,472 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-22 14:23:30,477 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-22 14:23:30,511 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020-12-22 14:23:32,968 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-22 14:23:33,098 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2020-12-22 14:23:33,601 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 4.518 seconds (JVM running for 5.533)
+2020-12-22 14:23:34,314 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-22 14:27:57,685 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests on Jiaxi with PID 20108 (started by gaoji_000 in F:\project\community)
+2020-12-22 14:27:57,687 INFO [main] c.n.c.RedisTests [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-12-22 14:27:58,615 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-22 14:27:58,619 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-22 14:27:58,650 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-12-22 14:28:01,107 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-22 14:28:01,247 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2020-12-22 14:28:01,766 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 4.547 seconds (JVM running for 5.47)
+2020-12-22 14:28:02,468 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-22 14:30:44,195 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests on Jiaxi with PID 18452 (started by gaoji_000 in F:\project\community)
+2020-12-22 14:30:44,197 INFO [main] c.n.c.RedisTests [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-12-22 14:30:45,190 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-22 14:30:45,194 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-22 14:30:45,234 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2020-12-22 14:30:47,815 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-22 14:30:47,989 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2020-12-22 14:30:48,531 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 4.805 seconds (JVM running for 5.746)
+2020-12-22 14:30:49,200 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-22 14:34:46,473 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests on Jiaxi with PID 19224 (started by gaoji_000 in F:\project\community)
+2020-12-22 14:34:46,475 INFO [main] c.n.c.RedisTests [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-12-22 14:34:47,404 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-22 14:34:47,408 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-22 14:34:47,440 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-12-22 14:34:49,860 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-22 14:34:49,973 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2020-12-22 14:34:50,428 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 4.413 seconds (JVM running for 5.323)
+2020-12-22 14:34:51,090 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-22 14:42:16,557 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:55] Starting RedisTests on Jiaxi with PID 32 (started by gaoji_000 in F:\project\community)
+2020-12-22 14:42:16,559 INFO [main] c.n.c.RedisTests [SpringApplication.java:651] No active profile set, falling back to default profiles: default
+2020-12-22 14:42:17,574 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-22 14:42:17,577 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-22 14:42:17,607 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-12-22 14:42:19,932 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-22 14:42:20,083 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java:58] Adding welcome page template: index
+2020-12-22 14:42:20,575 INFO [main] c.n.c.RedisTests [StartupInfoLogger.java:61] Started RedisTests in 4.494 seconds (JVM running for 5.431)
+2020-12-22 14:42:21,347 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
