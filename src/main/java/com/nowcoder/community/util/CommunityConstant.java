@@ -41,4 +41,24 @@ public interface CommunityConstant {
      * entity type: user
      */
     int ENTITY_TYPE_USER = 3;
+
+    /**
+     * topics type: comment
+     */
+    String TOPIC_COMMENT = "comment";
+
+    /**
+     * topics type: like
+     */
+    String TOPIC_LIKE = "like";
+
+    /**
+     * topics type: follow
+     */
+    String TOPIC_FOLLOW = "follow";
+
+    /**
+     * System User Id
+     */
+    int SYSTEM_USER_ID = 1;
 }
