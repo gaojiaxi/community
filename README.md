@@ -26,8 +26,48 @@ The overall structure (tech stack) of this project:
 ## MySQL install and initialization
 1. Download [mysql](https://dev.mysql.com/downloads/mysql) and [mysql-workbench](https://dev.mysql.com/downloads/workbench)
 2. Unzip both to a specific folder(e.g. F://workspace//mysql, F://workspace//mysql-workbench)
-3. Copy my.
-
+3. Copy "./community-init-sql-1.5/my.ini" to your mysql root directory, you may have to change port number or basedir based on your PC.
+4. Add mysql root directory to System Path.
+5. Run cmd, change the current diretory to mysql/root/bin
+6. Initialize mysql using following code, copy the temporary password.
+    ```
+    mysql1d --initilize --console
+    ```
+7. Install mysql service
+    ```
+    mysql1d install
+    ```
+8. Start mysql Service
+   ```
+   net start mysql
+   ```
+9. Open a new terminal, access mysql using following code and temporary password obtained from step 6.
+    ```
+    mysql -uroot -p
+    ```
+10. Change temporary password to yourpassword 
+    ```
+    alter user root@localhost identified by "yourpassword"
+    ```
+11. Create a database for this project, then use it
+    ```
+    create database community
+    use community:
+    ```
+12. Create table using init_schema.sql
+    ```
+    source F:/work/community-init-sql/init_schema.sql;
+    ```
+13. Insert test data using init_data.sql
+    ```
+    source F:/work/community-init-sql/init_data.sql;
+    ```
+14. Test if the test is inserted into mysql table
+    ```
+    select * from user
+    ```
+    you should be able to see
+    ![](https://github.com/gaojiaxi/Around/blob/master/demoPics/dataflow.png)
 ## How to config and 
 You can use any IDE for this project, I recommand using Goland or Vim.
 Here is how I configured my VIM
