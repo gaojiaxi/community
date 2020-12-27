@@ -15,13 +15,97 @@ Gnerally, it supports the following functions:
 
 ## Tech Stack
 * Java (backend)/HTML/CSS/Javascript (frontend)
-* SpringMVC/Spring Email/Mybatis/MySQL/Redis/Apache Kafka/ElasticSearch/AJAX
+* SpringMVC/Apache Maven/Spring Email/Mybatis/MySQL/Redis/Apache Kafka/ElasticSearch/AJAX
 * AWS cloud Computing/AWS EC2
 
 ## Project Structure
 The overall structure (tech stack) of this project:
 ![](https://github.com/gaojiaxi/Around/blob/master/demoPics/structure.png)
 ![](https://github.com/gaojiaxi/Around/blob/master/demoPics/dataflow.png)
+
+
+## Reasons for using such tech stacks <br>
+**1. Why using IntelliJ as the IDE?**<br>
+* IntelliJ is the most popular Java IDE.
+* IntelliJ has better code autocompletion and renaming suggestions.
+* Intellij indexes the world and everything just works intuitively.
+* I have used eclipse for more than one year and I felt IntelliJ is much easier to use compared to eclipse.
+
+**2. Why using Mybatis instead of plain JDBC?**<br>
+* Out-of-the-box table/query caching.
+* Dynamic SQL.
+* SQL is stored outside of the code.
+* Templating SQL for easier DB vendor Independence.
+
+**3. What is Redis?**<br>
+* Redis is a NoSQL database based on key-value pairs.
+* Redis stored data in memory, which makes it very fast.
+* Redis also stored data in local disk which makes it very safe and easy to restore from failure.
+* Redis can be used for:Caching, Ranking, Counting, Social Network and Message queue.
+
+**3. Why using Redis when you already have mysql?**<br>
+* I used redis to implement like/follow method. (i.e., user can like a post/comment, user can follow other users).
+* I used redis to implement count like/follow method(i.e., count how many followers and how many likes that a use has received)
+* I used redis to refactoring login module. To be more specific, I applied redis in three parts:
+    * Using Redis to store kaptcha.
+        * Since kaptcha are frequently visited and refreshed, it requires high performance.
+        * Since kaptcha are only valid for a short period of time.
+    * Using Redis to store login Ticket
+        * Previously, I stored loginTicket in MYSQL, whenever user make a request, The server need to search in the SQL to verify the user.
+        * Storing login ticket in SQL will become slow when more and more users used our website. 
+        * Now, I stored loginTicket in Redis since redis is fast. Also we do not have to keep loginTicket forever since the user will go offline after a period of time.
+    * Using Redis to Store User Information
+        * Previously, I stored User information in MYSQL, whenever user make a request, The server need to search in the SQL to obtain Userinformation.
+        * Storing user information in SQL will become slow when more and more users used our website. 
+        * Now I am using Redis to cache user information to improve server respond time. 
+
+**4. What is BlockingQueue and Why we need BlockingQueue?**<br>
+* A blocking queue is a queue that blocks when you try to dequeue from it and the queue is empty, or if you try to enqueue items to it and the queue is already full. 
+A thread trying to dequeue from an empty queue is blocked until some other thread inserts an item into the queue. A thread trying to enqueue an item in a full queue is blocked until some other thread makes space in the queue, either by dequeuing one or more items or clearing the queue completely.
+A blocking queue is illustrated as follows.
+![](https://github.com/gaojiaxi/community/blob/master/demoPics/BlockingQueue.png)
+* Producer/Consumer design pattern
+    * Producer: Thread which produce data
+    * Consumer: Thread which consume data
+* BlockingQueue can be used to solve Thread Communication problems caused by imblanced speed(e.g., Producer thread produce data much faster than Consumer Thread)
+* Implented Class:
+    * ArrayBlockingQueue
+    * LinkedBlockingQueue
+    * PriorityBlockingQueue
+    * SynchronousQueue
+    * DelayQueue
+
+**5. What is Kafka?**<br>
+* Apache Kafka is an event streaming platform.
+* Kafka can be applied for Message Service, log data collection, User activity tracking, etc.
+* Kafka has High throughput, persistent data, high reliability and high extensibility.
+* Kafka key concept:
+    * Broker(server), Zookeeper(Centralized service which monitoring distributed systems)
+    * Topic, Partition, Offset
+    * Leader Replica, Follow Replica
+* A kafka demo is illustrated as follows:
+![](https://github.com/gaojiaxi/community/blob/master/demoPics/Kafka_structure.png)
+
+**6. How to use Kafka in our project?**<br>
+For our project, there are three types(topics) of messages:
+* Comment: triggered when other users make a comment on a posts/comments.
+* Like: triggered when other users likes a posts/comments.
+* Follow: triggered when users follows other users.
+
+As illustrated below: 
+![](https://github.com/gaojiaxi/community/blob/master/demoPics/Kafka_message_topics.png)
+
+We can use kafkaTemplate to define producer and consumer:
+* Producer:
+```
+kafkaTemplate.send(topic, data);
+```
+* Listener:
+```
+@KafkaListener(topics = {"test"})
+public void handleMessage(ConsumerRecord record) {}
+```
+**7. What is elastic Search?**<br>
 
 ## MySQL install and initialization
 1. Download [mysql](https://dev.mysql.com/downloads/mysql) and [mysql-workbench](https://dev.mysql.com/downloads/workbench)
@@ -67,131 +151,7 @@ The overall structure (tech stack) of this project:
     select * from user
     ```
     you should be able to see
-    ![](https://github.com/gaojiaxi/Around/blob/master/demoPics/dataflow.png)
-## How to config and 
-You can use any IDE for this project, I recommand using Goland or Vim.
-Here is how I configured my VIM
-* Install vim-go plugin for vim: https://github.com/fatih/vim-go
-* Minimal vim configuration (~/.vim/vimrc, or $HOME/vimfiles/vimrc for Windows)
-    ```
-    set nocompatible
-    set encoding=utf-8
-    set autoread
-    
-    syntax on
-    filetype indent plugin on
-    
-    set ruler
-    
-    “ If you use a dark background
-    set background=dark
-    ```
-
-## How to configure and start elastic search engine in Google Compute Engine
-
-1. step1: Open your console.cloud.google.com. Then Find NETWORKING -> VPC network -> Firewall rules.  
-![](https://github.com/gaojiaxi/Around/blob/master/demoPics/config_es_step1_1.png)  
-Click ‘CREATE FIREWALL RULE’  
-![](https://github.com/gaojiaxi/Around/blob/master/demoPics/config_es_step1_2.png)  
-In the next page, give it a name like ‘elasticsearch’.   
-Set the Target tags to be ‘es’, source IP ranges to be ‘0.0.0.0/0’, and the specified protocols and ports to be ‘tcp:9200’.   
-![](https://github.com/gaojiaxi/Around/blob/master/demoPics/config_es_step1_3.png)  
-Wait until the firewall rules is created.   
-
-2. step2: Find Compute Engine->VM instances  
-![](https://github.com/gaojiaxi/Around/blob/master/demoPics/config_es_step2_1.png)  
-Choose ‘Create’
-![](https://github.com/gaojiaxi/Around/blob/master/demoPics/config_es_step2_2.png)  
-Choose ‘Change’ and switch to Ubuntu 16. Keep the size of 10GB is fine.  
-![](https://github.com/gaojiaxi/Around/blob/master/demoPics/config_es_step2_3.png)
-![](https://github.com/gaojiaxi/Around/blob/master/demoPics/config_es_step2_4.png)  
-Then in the Networking -> Network tags, set it to be ‘es’ (the firewall rule that we created).   
-![](https://github.com/gaojiaxi/Around/blob/master/demoPics/config_es_step2_5.png)  
-
-3. step3: After one minute, you will see the instance is started. Choose ‘SSH’ and then ‘Open in browser window’.
- ![](https://github.com/gaojiaxi/Around/blob/master/demoPics/config_es_step3_1.png)  
- ![](https://github.com/gaojiaxi/Around/blob/master/demoPics/config_es_step3_2.png)  
-4. step4  
- In the terminal, enter
-     ```
-   sudo apt-get update
-   sudo apt-get install default-jre
-    ```  
-   It will install java to your vm. To verify, enter ‘which java’ and ‘java -version’, you will see  
-   ![](https://github.com/gaojiaxi/Around/blob/master/demoPics/config_es_step4_1.png)  
-   Install ElasticSearch as below  
-   ```
-   wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/2.3.1/elasticsearch-2.3.1.deb
-   sudo dpkg -i elasticsearch-2.3.1.deb
-   sudo systemctl enable elasticsearch.service
-   ```
-   Edit the configuration file  
-   ```
-   sudo vim /etc/elasticsearch/elasticsearch.yml
-   ```
-   Add two lines to the config, to allow all traffic and listen on port 9200.  
-   ```
-   network.host: 0.0.0.0
-   http.port: 9200
-   ```
-   Save this and start ElasticSearch  
-   ```
-   sudo service elasticsearch start
-   ```
-   Check the status of ElasticSearch  
-   ```
-   sudo service elasticsearch status
-   ```
-   If the service started correctly, you will see ‘active’ in the status  
-   ![](https://github.com/gaojiaxi/Around/blob/master/demoPics/config_es_step4_2.png) 
-
-
-## Reasons for using such tech stacks <br>
-**1. Why choose Golang as backend language?**<br>
-* Go is built for system application, web application, i.e., we don’t need Django for python and TomCat for java. It has built-in web services to handle HTTP request/response, URL mapping…
-* Go has been very well designed and optimised for scaling(Go routine and channel)
-* Go is a fast, statically typed, compiled language that feels like a dynamically typed, interpreted language.
-* In my opinion, go is the future of server language.
-
-**2. Why choose ElasticSearch?**<br>
-* ES is an open source, distributed, RESTful search engine. As the heart of the Elastic Stack, it centrally stores our data so we can query the data quickly.
-* ES is implemented by K-D tree, which is very efficient to perform 2-dimensional search problem(e.g. given latitute and longitute, search all posts in that position within 200km)
-* I also use ES to store structured data(post's content, lat and lon)
-
-**3. Why choose Google App Engine Flex?**<br>
-* Google App Engine is a cloud computing platform for developing and hosting web applications in Google-managed data centers.
-* Actually, GAE is based on GCE, however, by using GAE, I don't need to build a system by myself, load balancer and VMs are implemented in black box in GAE.
-* App Engine flexible environment automatically scales app up and down while balancing the load. Microservices, authorization, SQL and NoSQL databases, traffic splitting, logging. 
-
-**4. Why choose Google Compute Engine?**<br>
-* GCE is similar to Amazon EC2, which offers virtual machines (Xen, KVM, VirtualBox, VMware ESX, etc.). Amazon EC2 and Google Compute Engine belong to IaaS as well. 
-* I install ES in the VM(Ubuntu 16) in the GCE to store post information and perform search.
-
-**5. Why use Google Cloud Storage(GCS)?**<br>
-* To store unstructured data (user posted images). BigTable, BigQuery, ElasticSearch are all for structured data. GCS is well-known for its durability, scalability and availability.
-
-**6. Why use BigTable instead of MySQL or MangoDB?**<br>
-* I want to make this project scalable, MySQL do not have enough scability. MongoDB is good, but it is just software, in order to make it scalable, I need to rent vms and clusters, to build system by myself. BigTable is a sparse, distributed, persistent multidimensional sorted map. It runs on Google cloud, which is very scalable, I only need to implement my business logic, which is very convenient. 
-
-**7. Why use BigTable since I already use ES to save post data?**<br>
-* I want to do offline data analysis on it using BigQuery. ES is search engine with complicated query support and better read performance but may lose data, so I save posts data on ES and Bigtable both.
-* Save post data to ES is for geo-index based range search. Save post data to BigTable is for offline data analysis using BigQuery latter.
-
-**8. Why use DataFlow and BigQuery?**<br>
-* I want to do some data analysis of user posted data(like sentiment analysis, spam filter..). BigTable is designed for saving large volume of data but not good for querying (JOIN, ORDER BY etc.). BigQuery, instead, is efficient for querying. It is Google's fully managed, petabyte scale, low cost enterprise data warehouse. It supports data analysis by using SQL syntax.
-* In order to dump data into BigQuery from BigTable, I need to use Google DataFlow, which runs in Google's cloud platform, who can help me to transform my data from BigTable to BigQuery easily.
-
-**9. Why use Cache?**<br>
-* When performance needs to be improved, caching is often the first step to take, so I decide to place previously requested information (search query) in cache to speed up data access and reduce bandwidth demand. In this project, I use TTL(time to live) as caching Strategy.
-
-**10. Why Choose Redis instead of Memcached?**<br>
-* Redis is an open source, in-memory data structure store, used as a database, cache and message broker. Basically a key-values store. Google Cloud has a memcache similarly but it does not support GAE flex yet.
-* Redis has more features than Memcached and is, thus, more powerful and flexible. Refered this link: https://www.infoworld.com/article/3063161/nosql/why-redis-beats-memcached-for-caching.html
-
-## Tools
-GoLand
-Google Cloud Platform
-Apache Maven(it will install all dependencies(dataflow related libraries) automatically, and can create Java project and manage it for you)
+    ![](https://github.com/gaojiaxi/community/blob/master/demoPics/mysql_init_test.png)
 
 ## Requirements
 
@@ -207,27 +167,6 @@ Apache Maven(it will install all dependencies(dataflow related libraries) automa
 * Front-end implementation using React.js.
 
 ## Version Change Log
-1. v0.0.1(05/23/2018)<br>
-* Create GCE(Google Compute Engine) instance and install elastic search(golang version).
-* Designed and create handlerSearch and handlerPost functions' API.
-2. v0.0.2(05/24/2018)<br>
-* Finish the implemententation of handlerSearch, handlerPost, tested on the local machine and GCE.
-3. v0.0.3(05/30/2018)<br>
-* Add filter sensitive words function in search method(Spam and Abuse Detection).
-* Deploy backend to Google App Engine.
-4. v0.0.4(06/07/2018)<br>
-* Create bucket in Google Cloud Storage(GCS).
-* Update handlerPost function to parse multipart form and store post with image file into GCS.
-5. v0.0.5(06/11/2018)<br>
-* Update handlerPost function to support save post data into BigTable.
-6. v0.0.6(06/23/2018)<br>
-* Applied Google dataflow to dump post data from BigTable to BigQuery.
-7. v0.0.7(07/01/2018)<br>
-* Integreted OAuth 2.0 to support authentication and user signup.
-8. v0.0.8(07/17/2018)<br>
-* Used Redis to cache search requests to speed up user query.
-9. v0.0.9(08/23/2018)<br>
-* Init front-end React project.
 
 ## Licenses
 NAN
