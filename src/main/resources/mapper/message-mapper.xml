@@ -82,11 +82,11 @@
         select <include refid="selectFields"></include>
         from message
         where id in (
-            select max(id) from message
-            where status != 2
-            and from_id = 1
-            and to_id = #{userId}
-            and conversation_id = #{topic}
+        select max(id) from message
+        where status != 2
+        and from_id = 1
+        and to_id = #{userId}
+        and conversation_id = #{topic}
         )
     </select>
 
@@ -96,7 +96,6 @@
         and from_id = 1
         and to_id = #{userId}
         and conversation_id = #{topic}
-
     </select>
 
     <select id="selectNoticeUnreadCount" resultType="int">
@@ -105,7 +104,7 @@
         and from_id = 1
         and to_id = #{userId}
         <if test="topic!=null">
-            abd conversation_id = #{topic}
+            and conversation_id = #{topic}
         </if>
     </select>
 
@@ -119,8 +118,5 @@
         order by create_time desc
         limit #{offset}, #{limit}
     </select>
-
-
-
 
 </mapper>
