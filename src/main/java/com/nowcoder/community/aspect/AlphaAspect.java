@@ -4,45 +4,39 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
-import java.sql.SQLOutput;
-
-
 //@Component
 //@Aspect
 public class AlphaAspect {
 
     @Pointcut("execution(* com.nowcoder.community.service.*.*(..))")
-    public void pointcut(){
+    public void pointcut() {
 
     }
 
     @Before("pointcut()")
-    public void before(){
+    public void before() {
         System.out.println("before");
     }
 
     @After("pointcut()")
-    public void after(){
+    public void after() {
         System.out.println("after");
     }
 
     @AfterReturning("pointcut()")
-    public void afterReturning(){
-        System.out.println("afterReturning");
+    public void afterRetuning() {
+        System.out.println("afterRetuning");
     }
 
     @AfterThrowing("pointcut()")
-    public void afterThrowing(){
+    public void afterThrowing() {
         System.out.println("afterThrowing");
     }
 
     @Around("pointcut()")
-    public Object around(ProceedingJoinPoint joinPoint) throws Throwable{
+    public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         System.out.println("around before");
-
-        // 调用目标组件方法
         Object obj = joinPoint.proceed();
-
         System.out.println("around after");
         return obj;
     }

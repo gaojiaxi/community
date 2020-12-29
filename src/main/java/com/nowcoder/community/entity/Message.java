@@ -80,5 +80,4 @@ public class Message {
                 ", createTime=" + createTime +
                 '}';
     }
-
 }

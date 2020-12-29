@@ -3,6 +3,7 @@ package com.nowcoder.community.entity;
 import java.util.Date;
 
 public class Comment {
+
     private int id;
     private int userId;
     private int entityType;
@@ -11,20 +12,6 @@ public class Comment {
     private String content;
     private int status;
     private Date createTime;
-
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", userId=" + userId +
-                ", entityType=" + entityType +
-                ", entityId=" + entityId +
-                ", targetId=" + targetId +
-                ", content='" + content + '\'' +
-                ", status=" + status +
-                ", createTime=" + createTime +
-                '}';
-    }
 
     public int getId() {
         return id;
@@ -88,5 +75,19 @@ public class Comment {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", entityType=" + entityType +
+                ", entityId=" + entityId +
+                ", targetId=" + targetId +
+                ", content='" + content + '\'' +
+                ", status=" + status +
+                ", createTime=" + createTime +
+                '}';
     }
 }

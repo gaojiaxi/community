@@ -61,8 +61,9 @@ public class Event {
         return data;
     }
 
-    public Event setData(String key, Object data) {
-        this.data.put(key, data);
+    public Event setData(String key, Object value) {
+        this.data.put(key, value);
         return this;
     }
+
 }
