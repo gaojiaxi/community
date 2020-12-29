@@ -105,7 +105,26 @@ kafkaTemplate.send(topic, data);
 @KafkaListener(topics = {"test"})
 public void handleMessage(ConsumerRecord record) {}
 ```
-**7. What is elastic Search?**<br>
+**7. What is Elasticsearch?**<br>
+* Introduction of Elasticsearch
+    * Elasticsearch is a distributed, open source search and analytics engine
+    * Elasticsearch supports for all types of data, including textual, numerical, geospatial, structured, and unstructured. 
+    * Known for its simple REST APIs, distributed nature, speed, and scalability.
+    * Elasticsearch is easy to perform horizontal scaling and can handle data in PB per seconds.
+* Keyconcepts of Elasticsearch
+    * index, type, document, id
+    * cluster, nodes, shard, replica
+
+**8. How do we use Elastic Search in our project?**<br>
+* Add Three method in service level. Which are:
+    * Save posts to Elasticsearch server
+    * Delete posts from Elasticsearch server
+    * Search posts from Elasticsearch server using keywords
+* Update DiscussPostController and CommentController to trigger events in the following way:
+    * When user adding new posts, server also add it to the Elasticsearch server.
+    * When user adding comments to posts, server also add it to the Elasticsearch server.
+    * Adding a new method in EventConsumer in order to handle the above two events.
+* Change frontend accordingly to support illustrate results.
 
 ## MySQL install and initialization
 1. Download [mysql](https://dev.mysql.com/downloads/mysql) and [mysql-workbench](https://dev.mysql.com/downloads/workbench)
@@ -153,10 +172,6 @@ public void handleMessage(ConsumerRecord record) {}
     you should be able to see
     ![](https://github.com/gaojiaxi/community/blob/master/demoPics/mysql_init_test.png)
     
-
-**8. How do we use Elastic Search in our project?**<br>
-
-
 
 ## ElasticSearch install and configuration
 * Download [Elastic Search](https://www.elastic.co/cn/downloads/past-releases/elasticsearch-6-4-3) and [elasic-ik](https://github.com/medcl/elasticsearch-analysis-ik/releases/tag/v6.4.3) from the link.
