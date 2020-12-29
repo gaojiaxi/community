@@ -86,7 +86,7 @@ A blocking queue is illustrated as follows.
 * A kafka demo is illustrated as follows:
 ![](https://github.com/gaojiaxi/community/blob/master/demoPics/Kafka_structure.png)
 
-**6. How to use Kafka in our project?**<br>
+**6. How do we use Kafka in our project?**<br>
 For our project, there are three types(topics) of messages:
 * Comment: triggered when other users make a comment on a posts/comments.
 * Like: triggered when other users likes a posts/comments.
@@ -152,6 +152,10 @@ public void handleMessage(ConsumerRecord record) {}
     ```
     you should be able to see
     ![](https://github.com/gaojiaxi/community/blob/master/demoPics/mysql_init_test.png)
+    
+
+**8. How do we use Elastic Search in our project?**<br>
+
 
 
 ## ElasticSearch install and configuration
