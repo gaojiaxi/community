@@ -3,21 +3,12 @@ package com.nowcoder.community.entity;
 import java.util.Date;
 
 public class LoginTicket {
+
     private int id;
     private int userId;
     private String ticket;
     private int status;
-
-    @Override
-    public String toString() {
-        return "LoginTicket{" +
-                "id=" + id +
-                ", userId=" + userId +
-                ", ticket='" + ticket + '\'' +
-                ", status=" + status +
-                ", expired=" + expired +
-                '}';
-    }
+    private Date expired;
 
     public int getId() {
         return id;
@@ -59,5 +50,14 @@ public class LoginTicket {
         this.expired = expired;
     }
 
-    private Date expired;
+    @Override
+    public String toString() {
+        return "LoginTicket{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", ticket='" + ticket + '\'' +
+                ", status=" + status +
+                ", expired=" + expired +
+                '}';
+    }
 }

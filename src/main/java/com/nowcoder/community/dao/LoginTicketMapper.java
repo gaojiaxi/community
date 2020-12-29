@@ -1,6 +1,5 @@
 package com.nowcoder.community.dao;
 
-
 import com.nowcoder.community.entity.LoginTicket;
 import org.apache.ibatis.annotations.*;
 
@@ -8,25 +7,27 @@ import org.apache.ibatis.annotations.*;
 @Deprecated
 public interface LoginTicketMapper {
 
-
     @Insert({
-            "INSERT INTO login_ticket(user_id,ticket,status,expired) ",
+            "insert into login_ticket(user_id,ticket,status,expired) ",
             "values(#{userId},#{ticket},#{status},#{expired})"
     })
     @Options(useGeneratedKeys = true, keyProperty = "id")
     int insertLoginTicket(LoginTicket loginTicket);
 
-
     @Select({
-            "SELECT id,user_id,ticket,status,expired ",
-            "FROM login_ticket WHERE ticket=#{ticket}"
+            "select id,user_id,ticket,status,expired ",
+            "from login_ticket where ticket=#{ticket}"
     })
     LoginTicket selectByTicket(String ticket);
 
-
     @Update({
-            "UPDATE login_ticket set status=#{status} ",
-            "WHERE ticket=#{ticket}"
+            "<script>",
+            "update login_ticket set status=#{status} where ticket=#{ticket} ",
+            "<if test=\"ticket!=null\"> ",
+            "and 1=1 ",
+            "</if>",
+            "</script>"
     })
     int updateStatus(String ticket, int status);
+
 }

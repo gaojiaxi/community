@@ -1,7 +1,5 @@
 package com.nowcoder.community.util;
 
-import org.apache.commons.lang3.StringUtils;
-
 public class RedisKeyUtil {
 
     private static final String SPLIT = ":";
@@ -15,7 +13,6 @@ public class RedisKeyUtil {
 
     // 某个实体的赞
     // like:entity:entityType:entityId -> set(userId)
-    // we use set to track which user has liked the entity/posts.
     public static String getEntityLikeKey(int entityType, int entityId) {
         return PREFIX_ENTITY_LIKE + SPLIT + entityType + SPLIT + entityId;
     }
@@ -27,36 +24,30 @@ public class RedisKeyUtil {
     }
 
     // 某个用户关注的实体
-    // followee:userId:entityType -> zset(entityId, nowTime)
-    public static String getFolloweeKey(int userId, int entityType){
+    // followee:userId:entityType -> zset(entityId,now)
+    public static String getFolloweeKey(int userId, int entityType) {
         return PREFIX_FOLLOWEE + SPLIT + userId + SPLIT + entityType;
     }
 
     // 某个实体拥有的粉丝
-    // follower:entityType:entityId -> zset(userId, nowTime)
-    public static String getFollowerKey(int entityType, int entityId){
+    // follower:entityType:entityId -> zset(userId,now)
+    public static String getFollowerKey(int entityType, int entityId) {
         return PREFIX_FOLLOWER + SPLIT + entityType + SPLIT + entityId;
     }
 
     // 登录验证码
-    // owner是用户的临时凭证
-    public static String getKaptchaKey(String owner){
+    public static String getKaptchaKey(String owner) {
         return PREFIX_KAPTCHA + SPLIT + owner;
     }
 
-    // 登陆的凭证
+    // 登录的凭证
     public static String getTicketKey(String ticket) {
         return PREFIX_TICKET + SPLIT + ticket;
     }
 
     // 用户
-    public static String getUserKey(int userId){
+    public static String getUserKey(int userId) {
         return PREFIX_USER + SPLIT + userId;
     }
 
-
-
-
 }
-
-
