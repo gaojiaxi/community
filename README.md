@@ -21,7 +21,6 @@ Gnerally, it supports the following functions:
 ## Project Structure
 The overall structure (tech stack) of this project:
 ![](https://github.com/gaojiaxi/Around/blob/master/demoPics/structure.png)
-![](https://github.com/gaojiaxi/Around/blob/master/demoPics/dataflow.png)
 
 
 ## Reasons for using such tech stacks <br>
