@@ -153,7 +153,34 @@ public void handleMessage(ConsumerRecord record) {}
     you should be able to see
     ![](https://github.com/gaojiaxi/community/blob/master/demoPics/mysql_init_test.png)
 
+
+## ElasticSearch install and configuration
+* Download [Elastic Search](https://www.elastic.co/cn/downloads/past-releases/elasticsearch-6-4-3) and [elasic-ik](https://github.com/medcl/elasticsearch-analysis-ik/releases/tag/v6.4.3) from the link.
+Note that due to dramatic API change between ES6 to ES7, this project this tested only on ES 6.4.3 and ES-IK 6.4.3. I may refactor the code to adapt to ES newest version when I have time.
+* Unzip ES to your working directory and Unzip ES-IK to ES-root/pligins.
+* Open ES-root/config/elasticsearch.yml, change cluster.name to your project name and change path.data and path.logs to your working directory.
+* Open terminal, run ES-root/bin/elasticsearch.bat.If ES is installed correctly, you should able to see 
+ ![](https://github.com/gaojiaxi/community/blob/master/demoPics/es_run.png)
+* Open a new terminal, check if es is running correctly using the following commands.
+```
+-X GET "localhost:9200/_cat/health?v"
+-X GET "localhost:9200/_cat/nodes?v"
+```
+you should see:
+ ![](https://github.com/gaojiaxi/community/blob/master/demoPics/es_run_check.png)
+
+
+
 ## Requirements
+* Java 8.0
+* Mysql
+* Mybatis
+* Spring framework
+* Redis
+* Apache Kafka
+* Elastic Search 6.4.3
+* Postman (optional)
+
 
 ## Installation
 
